@@ -1,0 +1,65 @@
+.Container {
+    width: 600px;
+    margin-top: 30px;
+    background: rgba(97, 97, 97, 0.144);
+    margin: 60px auto;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+@media all and (max-width: 600px) {
+    .Container {
+      width: 90%;
+    }
+}
+
+@media all and (max-width: 336px) {
+    .Container {
+      width: 290px;
+    }
+}
+
+h1 {
+   text-align: center;
+   font-size: 16px;
+   margin-bottom: 40px;
+}
+
+.Product_list {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.Product_list > div > div {
+    display: inline-block;
+    margin: 5px 14px;
+    position: relative;
+}
+
+.Product_list > div:first-child > div::before {
+    position: absolute;
+    width: 100px;
+    top: 0px;
+    transform: translateY(-140%);
+    font-weight: 600;
+}
+
+.Product_list > div:first-child > .Id::before {
+    content: 'nr';
+}
+
+.Product_list > div:first-child > .Name::before {
+    content: 'Name';
+}
+
+.Product_list > div:first-child > .Hour::before {
+    content: 'Hour';
+}
+
+.Product_list > div:first-child > .Weight::before {
+    content: 'Weight [gr]';
+}
+
+.Product_list > div > .Name {
+    width: 70px;
+}
